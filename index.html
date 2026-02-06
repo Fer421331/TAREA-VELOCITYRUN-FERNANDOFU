@@ -1,308 +1,217 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Velocity Run</title>
 
-<title>Velocity Run</title>
-
-<link rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
-
-<style>
-
-/* ===== HERO CAROUSEL ===== */
-.hero-slide {
-display:none;
-background-size:cover;
-background-position:center;
-}
-
-.hero-slide.is-active {
-display:flex;
-}
-
-.overlay {
-background:rgba(0,0,0,.6);
-width:100%;
-}
-
-/* ===== PRODUCT HOVER ===== */
-.card {
-transition:.3s;
-}
-
-.card:hover {
-transform:translateY(-6px);
-box-shadow:0 18px 35px rgba(0,0,0,.15);
-}
-
-.card:hover .button {
-background:#ff3860;
-}
-
-/* ===== IMAGE PLACEHOLDER ===== */
-.product-img {
-height:200px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:600;
-}
-
-/* ===== TESTIMONIO BG ===== */
-.testimonio-bg {
-background:
-linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-url("https://images.unsplash.com/photo-1599058917212-d750089bc07e");
-background-size:cover;
-background-position:center;
-}
-
-</style>
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" />
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar is-fixed-top is-white">
-<div class="container">
-
-<div class="navbar-brand">
-<a class="navbar-item has-text-weight-bold">Velocity Run</a>
-<a class="navbar-burger" data-target="menu">
-<span></span><span></span><span></span>
-</a>
-</div>
-
-<div id="menu" class="navbar-menu">
-<div class="navbar-end">
-<a class="navbar-item" href="#catalogo">Catálogo</a>
-<a class="navbar-item" href="#testimonio">Atleta</a>
-<a class="navbar-item">
-<button class="button is-primary">Carrito</button>
-</a>
-</div>
-</div>
-
-</div>
-</nav>
-
-<!-- HERO CAROUSEL -->
-<section class="hero is-fullheight">
-
-<div id="slide1" class="hero-body hero-slide is-active"
-style="background-image:url('https://images.unsplash.com/photo-1542291026-7eec264c27ff');">
-
-<div class="overlay hero-body">
-<div class="container has-text-centered">
-
-<h1 class="title is-1 has-text-white">Velocity X-Pro</h1>
-<h2 class="subtitle is-3 has-text-white">$129.99</h2>
-
-<p class="has-text-white">
-Corre como los campeones. Tecnología que impulsa tu siguiente récord.
-</p>
-
-<a href="#catalogo" class="button is-primary is-large mt-4">
-Comprar Ahora
-</a>
-
-</div>
-</div>
-</div>
-
-<div id="slide2" class="hero-body hero-slide"
-style="background-image:url('https://images.unsplash.com/photo-1600185365483-26d7a4cc7519');">
-
-<div class="overlay hero-body">
-<div class="container has-text-centered">
-
-<h1 class="title is-1 has-text-white">Velocity Air</h1>
-<h2 class="subtitle is-3 has-text-white">$119.99</h2>
-
-<p class="has-text-white">
-Corre como los campeones. Tecnología que impulsa tu siguiente récord.
-</p>
-
-<a href="#catalogo" class="button is-primary is-large mt-4">
-Comprar Ahora
-</a>
-
-</div>
-</div>
-</div>
-
-<div id="slide3" class="hero-body hero-slide"
-style="background-image:url('https://images.unsplash.com/photo-1606813909027-40d3a9c1a70c');">
-
-<div class="overlay hero-body">
-<div class="container has-text-centered">
-
-<h1 class="title is-1 has-text-white">Velocity Flex</h1>
-<h2 class="subtitle is-3 has-text-white">$109.99</h2>
-
-<p class="has-text-white">
-Corre como los campeones. Tecnología que impulsa tu siguiente récord.
-</p>
-
-<a href="#catalogo" class="button is-primary is-large mt-4">
-Comprar Ahora
-</a>
-
-</div>
-</div>
-</div>
-
-</section>
-
-<!-- ===== CATALOGO ===== -->
-<section id="catalogo" class="section">
-
-<div class="container">
-
-<h2 class="title has-text-centered">
-Nuestro Catálogo
-</h2>
-
-<!-- FUNCION PARA GENERAR SECCIONES -->
-<script>
-function section(title){
-document.write(`<h3 class="title is-3 mt-6">${title}</h3><div class="columns is-multiline">`);
-for(let i=1;i<=10;i++){
-document.write(`
-<div class="column is-3">
-<div class="card">
-
-<div class="product-img has-background-grey-lighter">
-${title} ${i}
-</div>
-
-<div class="card-content">
-
-<p class="title is-6">${title} ${i}</p>
-<p>$129.99</p>
-
-<span class="tag is-success mb-2">Nuevo</span>
-
-<button class="button is-primary is-small is-fullwidth">
-Añadir al carrito
-</button>
-
-</div>
-</div>
-</div>
-`);
-}
-document.write(`</div>`);
-}
-</script>
-
-<script>
-section("Running");
-section("Entrenamiento");
-section("Lifestyle");
-section("Edición Especial");
-</script>
-
-</div>
-</section>
-
-<!-- TESTIMONIO -->
-<section id="testimonio"
-class="section testimonio-bg has-text-white">
-
-<div class="container">
-
-<div class="columns is-vcentered">
-
-<div class="column is-half">
-
-<h2 class="title has-text-white">
-Camila Torres
-</h2>
-
-<h3 class="subtitle has-text-white">
-Campeona Olímpica 800m
-</h3>
-
-<blockquote>
-“Desde que uso las Velocity X-Pro, siento que vuelo en cada zancada.
-Comodidad, ligereza y potencia en un solo paso.”
-</blockquote>
-
-<a class="button is-primary mt-4">
-Descubre la Edición Especial Velocity X-Pro
-</a>
-
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- CTA FINAL -->
-<section class="section has-background-primary has-text-white">
-
-<div class="container has-text-centered">
-
-<h2 class="title has-text-white">
-Únete a los más de 10,000 corredores que confían en Velocity
-</h2>
-
-<div class="buttons is-centered mt-4">
-
-<a class="button is-light">Instagram</a>
-<a class="button is-light">TikTok</a>
-<a class="button is-light">YouTube</a>
-
-</div>
-
-<div class="box mt-5">
-
-<h3 class="title is-5">
-Newsletter
-</h3>
-
-<input class="input mb-3" placeholder="Correo electrónico">
-
-<button class="button is-primary is-fullwidth">
-Suscribirse
-</button>
-
-</div>
-
-</div>
-</section>
-
-<footer class="footer">
-<div class="content has-text-centered">
-<p><strong>Velocity Run</strong> © 2025</p>
-</div>
-</footer>
-
-<script>
-
-/* ===== NAVBAR ===== */
-document.querySelector(".navbar-burger")
-.addEventListener("click",()=>{
-document.querySelector(".navbar-burger").classList.toggle("is-active");
-document.querySelector("#menu").classList.toggle("is-active");
-});
-
-/* ===== CAROUSEL ===== */
-let index=0;
-const slides=document.querySelectorAll(".hero-slide");
-
-setInterval(()=>{
-slides[index].classList.remove("is-active");
-index=(index+1)%slides.length;
-slides[index].classList.add("is-active");
-},4000);
-
-</script>
+  <nav class="navbar is-fixed-top is-white">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item has-text-weight-bold">Velocity Run</a>
+        <a role="button" class="navbar-burger" data-target="menu">
+          <span></span><span></span><span></span>
+        </a>
+      </div>
+
+      <div id="menu" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#catalogo">Catálogo</a>
+          <a class="navbar-item" href="#testimonio">Atleta</a>
+          <div class="navbar-item">
+            <button class="button is-primary">Carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero is-fullheight">
+    <div class="hero-body p-0">
+
+      <div class="hero-slide is-active" style="width:100%; background-image:url('https://images.unsplash.com/photo-1542291026-7eec264c27ff'); background-size:cover; background-position:center;">
+        <div class="hero-body" style="width:100%; background:rgba(0,0,0,.6);">
+          <div class="container has-text-centered">
+            <h1 class="title is-1 has-text-white">Velocity X-Pro</h1>
+            <h2 class="subtitle is-3 has-text-white">$129.99</h2>
+            <p class="has-text-white">Corre como los campeones. Tecnología que impulsa tu siguiente récord.</p>
+            <a href="#catalogo" class="button is-primary is-large mt-4">Comprar Ahora</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide" style="width:100%; background-image:url('https://images.unsplash.com/photo-1600185365483-26d7a4cc7519'); background-size:cover; background-position:center;">
+        <div class="hero-body" style="width:100%; background:rgba(0,0,0,.6);">
+          <div class="container has-text-centered">
+            <h1 class="title is-1 has-text-white">Velocity Air</h1>
+            <h2 class="subtitle is-3 has-text-white">$119.99</h2>
+            <p class="has-text-white">Corre como los campeones. Tecnología que impulsa tu siguiente récord.</p>
+            <a href="#catalogo" class="button is-primary is-large mt-4">Comprar Ahora</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide" style="width:100%; background-image:url('https://images.unsplash.com/photo-1606813909027-40d3a9c1a70c'); background-size:cover; background-position:center;">
+        <div class="hero-body" style="width:100%; background:rgba(0,0,0,.6);">
+          <div class="container has-text-centered">
+            <h1 class="title is-1 has-text-white">Velocity Flex</h1>
+            <h2 class="subtitle is-3 has-text-white">$109.99</h2>
+            <p class="has-text-white">Corre como los campeones. Tecnología que impulsa tu siguiente récord.</p>
+            <a href="#catalogo" class="button is-primary is-large mt-4">Comprar Ahora</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="catalogo" class="section">
+    <div class="container">
+      <h2 class="title has-text-centered">Nuestro Catálogo</h2>
+      <div id="catalogo-contenido"></div>
+    </div>
+  </section>
+
+  <section id="testimonio" class="section has-text-white"
+    style="
+      background-image:
+        linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+        url('https://images.unsplash.com/photo-1599058917212-d750089bc07e');
+      background-size:cover;
+      background-position:center;
+    ">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-half">
+          <h2 class="title has-text-white">Camila Torres</h2>
+          <h3 class="subtitle has-text-white">Campeona Olímpica 800m</h3>
+          <blockquote>
+            “Desde que uso las Velocity X-Pro, siento que vuelo en cada zancada.
+            Comodidad, ligereza y potencia en un solo paso.”
+          </blockquote>
+          <a class="button is-primary mt-4">Descubre la Edición Especial Velocity X-Pro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section has-background-primary has-text-white">
+    <div class="container has-text-centered">
+      <h2 class="title has-text-white">
+        Únete a los más de 10,000 corredores que confían en Velocity
+      </h2>
+
+      <div class="buttons is-centered mt-4">
+        <a class="button is-light">Instagram</a>
+        <a class="button is-light">TikTok</a>
+        <a class="button is-light">YouTube</a>
+      </div>
+
+      <div class="box mt-5">
+        <h3 class="title is-5">Newsletter</h3>
+        <input class="input mb-3" placeholder="Correo electrónico" />
+        <button class="button is-primary is-fullwidth">Suscribirse</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p><strong>Velocity Run</strong> © 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    const burger = document.querySelector(".navbar-burger");
+    const menu = document.querySelector("#menu");
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("is-active");
+      menu.classList.toggle("is-active");
+    });
+
+    const slides = document.querySelectorAll(".hero-slide");
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach((s, idx) => {
+        s.style.display = idx === i ? "flex" : "none";
+      });
+    }
+
+    showSlide(index);
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }, 4000);
+
+    const cont = document.getElementById("catalogo-contenido");
+    const precios = [89.99, 94.50, 102.30, 110.00, 119.99, 125.75, 134.40, 140.20, 149.99, 159.60];
+
+    function renderSection(title) {
+      const section = document.createElement("div");
+      section.innerHTML = `
+        <h3 class="title is-3 mt-6">${title}</h3>
+        <div class="columns is-multiline" data-grid></div>
+      `;
+
+      const grid = section.querySelector("[data-grid]");
+
+      for (let i = 1; i <= 10; i++) {
+        const col = document.createElement("div");
+        col.className = "column is-3";
+
+        col.innerHTML = `
+          <div class="card tarjeta-mov">
+            <div class="card-content has-text-centered">
+              <div class="box has-background-grey-lighter">
+                <p class="has-text-weight-semibold">${title} ${i}</p>
+              </div>
+
+              <p class="title is-6">${title} ${i}</p>
+              <p class="mb-2">$${precios[i-1]}</p>
+
+              <span class="tag is-success mb-3">Nuevo</span>
+
+              <button class="button is-primary is-small is-fullwidth">
+                Añadir al carrito
+              </button>
+            </div>
+          </div>
+        `;
+
+        grid.appendChild(col);
+      }
+
+      cont.appendChild(section);
+    }
+
+    renderSection("Running");
+    renderSection("Entrenamiento");
+    renderSection("Lifestyle");
+    renderSection("Edición Especial");
+
+    document.addEventListener("mouseover", e => {
+      if (e.target.closest(".tarjeta-mov")) {
+        const card = e.target.closest(".tarjeta-mov");
+        card.style.transform = "translateY(-10px)";
+        card.style.transition = "0.3s";
+        card.style.boxShadow = "0 12px 25px rgba(0,0,0,0.2)";
+      }
+    });
+
+    document.addEventListener("mouseout", e => {
+      if (e.target.closest(".tarjeta-mov")) {
+        const card = e.target.closest(".tarjeta-mov");
+        card.style.transform = "translateY(0)";
+        card.style.boxShadow = "none";
+      }
+    });
+  </script>
 
 </body>
 </html>
